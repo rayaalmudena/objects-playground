@@ -36,12 +36,11 @@ function buscarPez(banco_peces, pezBuscado) {
    
     while(!pezEncontrado && indicePez<banco_peces.length){
     
-        indicePez++;     
-        let pez=banco_peces[indicePez-1]["nombre"];
-        
+        let pez=banco_peces[indicePez].nombre;        
         if(pez==pezBuscado){
             pezEncontrado=true;
         }
+        indicePez++;
     }
     return pezEncontrado;
 }
