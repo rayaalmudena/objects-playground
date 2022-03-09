@@ -33,20 +33,25 @@ let banco_peces = [pez1, pez2, pez3]
 function buscarPez(banco_peces, pezBuscado) {
     let pezEncontrado = false
     let indicePez = 0
-
-    while(!pezEncontrado && indicePez<=banco_peces.length){
+   
+    while(!pezEncontrado && indicePez<banco_peces.length){
+    
+        indicePez++;     
+        let pez=banco_peces[indicePez-1]["nombre"];
         
+        if(pez==pezBuscado){
+            pezEncontrado=true;
+        }
     }
-
     return pezEncontrado;
 }
 
-// Esta llamada debería devolver 'true'
-// console.log(buscarPez(banco_peces, 'Nemo')); 
+//Esta llamada debería devolver 'true'
+console.log(buscarPez(banco_peces, 'Nemo')); 
 
-// Esta llamada debería devolver 'true'
-// console.log(buscarPez(banco_peces, 'Sipho'));
+// //Esta llamada debería devolver 'true'
+console.log(buscarPez(banco_peces, 'Sipho'));
 
-// Esta llamada debería devolver 'false'
-// console.log(buscarPez(banco_peces, 'Tenacitas'));
+// //Esta llamada debería devolver 'false'
+ console.log(buscarPez(banco_peces, 'Tenacitas'));
 
